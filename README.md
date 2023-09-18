@@ -1,16 +1,16 @@
 ### EX NO : 01
-# <p align="center">PCA-GPU based vector summation.Explore the differences.</p>
+# <p align="center">PCA-GPU based vector summation. Explore the differences.</p>
 i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution confi guration of block.x = 1024. Try to explain the difference and the reason.
 
 ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
 
-## Aim:
+## Aim :
 
 (i) To modify or set the execution configuration of block.x as 1023 & 1024 and compare the elapsed time obtained on Host and GPU.
 
 (ii) To set the number of threads as 256 and obtain the elapsed time on Host and GPU.
 
-## Procedure:
+## Procedure :
 
 ### Step 1 :
 Include the required files and library.
@@ -28,7 +28,7 @@ Invoke kernel at host side(1023,1024,256), check for kernel error and copy kerne
 Finally Free device global memory,host memory and reset device.
 ### Step 8 :
 Save and Run the Program.
-## Program:
+## Program :
 Developed By : **Virgil Jovita A**
 </br>
 Register No. : **212221240062**
@@ -488,7 +488,7 @@ int main(int argc, char **argv)
     return(0);
 }
 ```
-## Output:
+## Output :
 
 ### 1. Block.x = 1023
 
@@ -519,7 +519,7 @@ CPU : for each i in [0,256]: c[i] = a[i] * b[i] . Here, Each thread progresses a
 
 GPU : float32_times256 c,b,a; c = b * a; where c=b*a is one instruction, with three huge operands.
 
-## Result:
+## Result :
 
 (i) The block.x is set as 1023 & 1024 and the elapsed time obtained on Host and GPU is compared.
 
